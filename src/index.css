@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.card {
+  width: 190px;
+  height: 254px;
+  /* background: rgb(103, 225, 255); */
+  transition: all 0.4s;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
+  font-size: 30px;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 30px;
+}
+
+.card:hover {
+  border-radius: 15px;
+  transform: scale(1.2);
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
+  background: rgb(103, 151, 255);
+}
+
+.first-content {
+  height: 100%;
+  width: 100%;
+  transition: all 0.4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  border-radius: 15px;
+}
+
+.card:hover .first-content {
+  height: 0px;
+  opacity: 0;
+}
+
+.second-content {
+  height: 0%;
+  width: 100%;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  transition: all 0.4s;
+  font-size: 0px;
+  transform: rotate(90deg) scale(-1);
+}
+
+.card:hover .second-content {
+  opacity: 1;
+  height: 100%;
+  font-size: 14px;
+  transform: rotate(0deg);
+}
+
+#mainComment {
+  width: 800px;
+  display: flex;
+  align-items: center;
+  height: 80px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.commentAvatar {
+  margin: 0px 20px;
+}
+
+.commentEmail {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.mainBtn {
+  margin: 30px 0px 0px 30px;
+  position: absolute;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.mainCard {
+  margin: 0px 15px 0px 0px !important;
+  border-radius: 10px !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.mainCard:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.MuiCardContent-root {
+  padding: 16px;
+  position: relative;
+  z-index: 5;
+}
+
+.card {
+  animation: zoomIn 1s ease-out;
+}
